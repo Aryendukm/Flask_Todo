@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -62,4 +63,4 @@ def products():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()   #In interpreter from app impot db, db.create_all()
-    app.run(debug=False,host="0.0.0.0")
+    app.run()
